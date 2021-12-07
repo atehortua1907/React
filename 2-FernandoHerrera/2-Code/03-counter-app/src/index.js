@@ -4,4 +4,4 @@ import PrimeraApp from './PrimeraApp';
 import './index.css';
 
 const divRoot = document.querySelector('#root');
-ReactDOM.render(<PrimeraApp saludo="Hola soy Gokú"/>, divRoot);
+ReactDOM.render(<PrimeraApp saludo={123}/>, divRoot);

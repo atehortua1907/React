@@ -1,6 +1,7 @@
 // import { Fragment } from "react";
+import PropTypes from 'prop-types';
 
-const PrimeraApp = ({saludo = 'Hola terricolas!'}) =>{
+const PrimeraApp = ({saludo}) =>{
 
     //Fragment retorna un elemento sin crear un div que lo agrupe
     // const saludo = "Hola terricolas!";
@@ -16,6 +17,10 @@ const PrimeraApp = ({saludo = 'Hola terricolas!'}) =>{
         //     <h1>Hola terricolas!</h1>
         // </fragment>
     );
+}
+
+PrimeraApp.propTypes ={
+    saludo: PropTypes.string.isRequired
 }
 
 export default PrimeraApp;

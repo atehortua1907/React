@@ -1,16 +1,20 @@
-const PrimeraApp = () =>{
+// import { Fragment } from "react";
+
+const PrimeraApp = ({saludo = 'Hola terricolas!'}) =>{
 
     //Fragment retorna un elemento sin crear un div que lo agrupe
-    return (
+    // const saludo = "Hola terricolas!";
+    return (        
 
-        <Fragment> 
-            <h1>Hola terricolas!</h1>
-        </Fragment>
+        <> 
+            <h1>{saludo}</h1>
+            {/* <pre>{JSON.stringify(saludo, null, 3)}</pre> //Para imprimir objetos */}
+        </>
 
-        // Tambien es posible retornar un fragment, así:
-        // <> 
+        // Tambien es posible retornar un fragment, así (importando Fragment):
+        // <fragment> 
         //     <h1>Hola terricolas!</h1>
-        // </>
+        // </fragment>
     );
 }
 

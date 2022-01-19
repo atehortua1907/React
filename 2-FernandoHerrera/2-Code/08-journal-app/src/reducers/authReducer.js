@@ -7,6 +7,15 @@ import { types } from "../types/types";
     }
 */
 
+//Ejemplo de un estado inicial
+// const initialState = {
+//     uid: 123123,
+//     name: 'Fernando',
+//     dir: {
+//        b: 12 
+//     }
+// }
+
 export const authReducer = (state = {}, action) => {
 
     switch (action.type) {

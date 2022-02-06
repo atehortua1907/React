@@ -10,7 +10,7 @@ import { useForm } from '../../hooks/useForm';
 export const LoginScreen = () => {
 
     const dispatch = useDispatch();
-    const { msgError } = useSelector(state => state.ui);
+    const { loading, msgError } = useSelector(state => state.ui);
 
     const [formValues, handleInputChange] = useForm(({
         email: 'gohan.atehortua@gmail.com',
@@ -40,9 +40,9 @@ export const LoginScreen = () => {
         if ( password.length < 5){
             dispatch(setErrorAction("password should be at least 6 characters"));
             return false;
-        }
-        
-        dispatch(removeErrorAction());
+        }        
+
+        msgError && dispatch(removeErrorAction());
         return true;
     }
 
@@ -79,6 +79,7 @@ export const LoginScreen = () => {
 
 
                 <button
+                    disabled={loading}
                     type="submit"
                     className="btn btn-primary btn-block"
                 >
